@@ -1,0 +1,52 @@
+# Jekyll _config.yml
+
+# Site settings
+title: "Your Site Title"
+description: "A brief description of your site"
+url: "https://your-site-url.com"  # The base URL of your site (change to your actual site URL)
+
+# Build settings
+source: .   # Set to current directory if your files are in the root
+destination: ./_site   # Default Jekyll build output directory
+incremental: false   # Disable incremental builds for now
+markdown: kramdown   # Markdown engine
+
+# If you are using GitHub Pages
+github:
+  is_project_page: true
+  # Repository should be set automatically by GitHub Pages environment
+  # url: "https://yourusername.github.io/yourrepository"
+
+# Include/exclude specific files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
+
+# Sass/SCSS settings
+sass:
+  sass_dir: _sass   # You can customize if your SCSS is in a different folder
+  style: compressed # Compressed output of CSS
+
+# Collections (optional if needed)
+collections:
+  docs:
+    output: true
+
+# Plugins (include any Jekyll plugins you want to use here)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Permalinks
+permalink: pretty
+
+# Theme
+theme: jekyll-theme-primer   # If you're using a Jekyll theme (you can change this)
+
+# Other settings
+future: true  # Process posts with future dates
+verbose: true  # Output more information during the build process
